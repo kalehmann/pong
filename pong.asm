@@ -152,13 +152,12 @@ start:
 
 .move_player_done:
 	; Clear the screen
-	;push word 0
-	;push word 0
-	;push word 320
-	;push word 200
-	;mov ah, 0
-	;call draw_rect
-	call set_video_mode
+	push word 0
+	push word 0
+	push word 320
+	push word 200
+	mov ah, 0
+	call draw_rect
 
         ; DRAW SCORE
 	mov ah, 02h			; Interrupt, set cursor
